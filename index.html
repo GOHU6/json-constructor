@@ -11,8 +11,24 @@
 <body>
   <div class="container">
     <div class="action">
+        <label for="object-name">nom : </label>
+        <input type="text" id="object-name" name="object-name" required size="15" />
 
-        <button onclick="createdobject()">Created</button>
+        <label for="object-type">type :</label>
+        <select id="object-type" name="object-type" required>
+            <option value="" selected></option>
+            <option value="type1">String</option>
+            <option value="type2">Number</option>
+            <option value="type3">Boolean</option>
+            <option value="type4">Object</option>
+            <option value="type5">Array</option>
+            <option value="type6">Null</option>
+        </select>
+        
+        <label for="object-value">valeur : </label>
+        <input type="text" id="object-value" name="object-value" disabled required size="15" />
+        
+        <button onclick="addOneLine()">ADD</button>
     </div>
     <div class="content" id="contentID" style="white-space: pre-line;"></div>
   </div>
